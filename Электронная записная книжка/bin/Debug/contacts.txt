@@ -1,0 +1,1 @@
+ID|Important|PhotoPath|LastName|FirstName|MiddleName|Birthday|Group|Company|Position|Phones|Emails|Address|Notes

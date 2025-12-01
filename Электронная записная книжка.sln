@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35431.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Электронная записная книжка", "Электронная записная книжка\Электронная записная книжка.csproj", "{EB2183E1-AEE6-4FD8-95A7-46D93BA2C23F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB2183E1-AEE6-4FD8-95A7-46D93BA2C23F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB2183E1-AEE6-4FD8-95A7-46D93BA2C23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB2183E1-AEE6-4FD8-95A7-46D93BA2C23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB2183E1-AEE6-4FD8-95A7-46D93BA2C23F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D6A6593-245C-44FA-9355-325DBB5008BB}
+	EndGlobalSection
+EndGlobal
