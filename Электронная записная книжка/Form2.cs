@@ -15,17 +15,19 @@ namespace Электронная_записная_книжка
     public partial class Form2 : Form
     {
         private Contact contact;
+        List<Contact> contacts1;
 
         // Добавляем события
         public event Action<Contact> OnContactUpdated;
         public event Action<int> OnContactDeleted; // Событие для удалени
-        public Form2(Contact contact)
+        public Form2(Contact contact, List<Contact> contacts)
         {
             InitializeComponent();
             this.contact = contact;
             this.MinimumSize = new Size(500, 650);
 
             DisplayContactInfo(); //Отображение данных контакта в окне
+            this.contacts1 = contacts;
         }
         private void DisplayContactInfo()
         {
@@ -118,10 +120,10 @@ namespace Электронная_записная_книжка
             return bmp;
         }
         //Событие нажатия на кнопку "Изменить"
-        private void button1_Click(object sender, EventArgs e)
+        private void Redact_Click(object sender, EventArgs e)
         {
             // Создаем форму редактирования и передаем текущий контакт
-            Form3 editForm = new Form3(contact);
+            Form3 editForm = new Form3(contact,contacts1);
 
             // Подписываемся на событие сохранения
             editForm.OnContactSaved += (updatedContact) =>

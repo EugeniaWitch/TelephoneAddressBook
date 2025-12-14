@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Электронная_записная_книжка
 {
@@ -17,13 +18,15 @@ namespace Электронная_записная_книжка
         public Contact EditedContact { get; private set; }
         public event Action<Contact> OnContactSaved;
         private bool isNewContact;
+        List<Contact> contacts2;
 
-        public Form3(Contact contact = null)
+        public Form3(Contact contact = null, List<Contact> contacts = null)
         {
             InitializeComponent();
             this.MinimumSize = new Size(500, 650);
             isNewContact = (contact == null);
             EditedContact = new Contact();
+            contacts2 = contacts;
             //Если это не новый контакт, то тогда вносим данные существующего контакта для дальнейшего редактирования
             if (!isNewContact)
             {
@@ -242,6 +245,13 @@ namespace Электронная_записная_книжка
                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
+            }
+
+            if ((checkBoxImportant.Checked) && (contacts2.Count(contact => contact.Important)==5))
+            {
+                MessageBox.Show($"У вас уже есть 5 контактов в избранных", "Ошибка",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
 
             return true;

@@ -1,13 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\TelephoneAddressBook",
-    "\\TelephoneAddressBook\\bin\\Debug",
-    "\\TelephoneAddressBook\\obj",
-    "\\TelephoneAddressBook\\obj\\Debug",
-    "\\TelephoneAddressBook\\obj\\Release",
-    "\\TelephoneAddressBook\\Properties"
+    "\\Электронная записная книжка"
   ],
-  "SelectedNode": "\\TelephoneAddressBook\\Form1.Designer.cs",
+  "SelectedNode": "\\Электронная записная книжка\\Form1.Designer.cs",
   "PreviewInSolutionExplorer": false
 }

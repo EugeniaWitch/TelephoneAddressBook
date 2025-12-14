@@ -50,7 +50,7 @@ namespace Электронная_записная_книжка
             this.richTextBoxEmail1 = new System.Windows.Forms.RichTextBox();
             this.richTextBoxEmail2 = new System.Windows.Forms.RichTextBox();
             this.richTextBoxNotes = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Redact = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePickerBirthday = new System.Windows.Forms.DateTimePicker();
@@ -247,19 +247,19 @@ namespace Электронная_записная_книжка
             this.richTextBoxNotes.TabIndex = 19;
             this.richTextBoxNotes.Text = "";
             // 
-            // button1
+            // Redact
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button1.Location = new System.Drawing.Point(92, 877);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 50);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Изменить";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Redact.BackColor = System.Drawing.Color.LightGreen;
+            this.Redact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Redact.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Redact.ForeColor = System.Drawing.Color.ForestGreen;
+            this.Redact.Location = new System.Drawing.Point(92, 877);
+            this.Redact.Name = "Redact";
+            this.Redact.Size = new System.Drawing.Size(200, 50);
+            this.Redact.TabIndex = 20;
+            this.Redact.Text = "Изменить";
+            this.Redact.UseVisualStyleBackColor = false;
+            this.Redact.Click += new System.EventHandler(this.Redact_Click);
             // 
             // button2
             // 
@@ -314,7 +314,6 @@ namespace Электронная_записная_книжка
             this.richTextBoxGroups.Size = new System.Drawing.Size(157, 30);
             this.richTextBoxGroups.TabIndex = 25;
             this.richTextBoxGroups.Text = "";
-            this.richTextBoxGroups.SelectionAlignment = HorizontalAlignment.Center;
             // 
             // Form2
             // 
@@ -326,7 +325,7 @@ namespace Электронная_записная_книжка
             this.Controls.Add(this.dateTimePickerBirthday);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Redact);
             this.Controls.Add(this.richTextBoxNotes);
             this.Controls.Add(this.richTextBoxEmail2);
             this.Controls.Add(this.richTextBoxEmail1);
@@ -377,7 +376,7 @@ namespace Электронная_записная_книжка
         private System.Windows.Forms.RichTextBox richTextBoxEmail1;
         private System.Windows.Forms.RichTextBox richTextBoxEmail2;
         private System.Windows.Forms.RichTextBox richTextBoxNotes;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Redact;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePickerBirthday;

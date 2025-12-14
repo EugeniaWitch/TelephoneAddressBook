@@ -17,8 +17,8 @@ namespace Электронная_записная_книжка
     public partial class Form1 : Form
     {
         //Записываем файл в переменную
-        private List<Contact> contacts = new List<Contact>();
-        private string dataFilePath = "C:/foruni/contacts.txt";
+        public List<Contact> contacts = new List<Contact>();
+        public string dataFilePath = "C:/foruni/contacts.txt";
         public Form1()
         {
             InitializeComponent();
@@ -246,7 +246,7 @@ namespace Электронная_записная_книжка
         //Открытие формы с подробным описание номера при нажатии на панель контакта
         private void ShowContactDetails(Contact contact)
         {
-            Form2 detailsForm = new Form2(contact);
+            Form2 detailsForm = new Form2(contact,contacts);
 
             // Подписываемся на обновление контакта
             detailsForm.OnContactUpdated += (updatedContact) =>
@@ -859,7 +859,7 @@ namespace Электронная_записная_книжка
         //Открывает окно редактирования/добавления и записывает данные
         private void AddNewContact()
         {
-            Form3 editForm = new Form3(); // Без параметра = новый контакт
+            Form3 editForm = new Form3(null,contacts); // Без параметра = новый контакт
             editForm.OnContactSaved += (savedContact) =>
             {
                 // Для нового контакта генерируем ID
@@ -934,6 +934,8 @@ namespace Электронная_записная_книжка
                                MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+       
     }
     //Класс, в котором хранятся все атрибуты контактов
     public class Contact
